@@ -1,0 +1,14 @@
+mm_multistepForm.multistep_one:
+  path: '/mm_multistepForm/multistep-one'
+  defaults:
+    _form: '\Drupal\mm_multistepForm\Form\MultistepOneForm'
+    _title: 'First form'
+  requirements:
+    _permission: 'access content'
+mm_multistepForm.multistep_two:
+  path: '/demo/multistep-two'
+  defaults:
+    _form: '\Drupal\mm_multistepForm\Form\MultistepTwoForm'
+    _title: 'Second form'
+  requirements:
+    _permission: 'access content'

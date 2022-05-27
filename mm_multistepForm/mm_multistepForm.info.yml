@@ -1,0 +1,6 @@
+name: formulaire multistep
+description: module custom pour création d'un formulaire en multi-step.
+package: custom
+type: module
+core_version_requirement: ^8.8.0 || ^9 || ^10
+version: '1.0.0'
