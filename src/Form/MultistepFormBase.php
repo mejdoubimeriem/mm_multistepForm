@@ -13,9 +13,13 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Session\SessionManagerInterface;
 use Drupal\Core\TempStore\PrivateTempStoreFactory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Messenger\MessengerTrait;
+
 
 abstract class MultistepFormBase extends FormBase
 {
+  use MessengerTrait;
+
   /**
    * @var \Drupal\Core\TempStore\PrivateTempStoreFactory
    */
@@ -92,7 +96,8 @@ abstract class MultistepFormBase extends FormBase
   {
     // Logic for saving data goes here...
     $this->deleteStore();
-    drupal_set_message($this->t('Le formulaire est enregistré.'));
+    $this->messenger()->addStatus($this->t('Le formulaire est enregistré.'));
+
   }
 
   /**

@@ -47,6 +47,6 @@ class MultistepOneForm extends MultistepFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->store->set('email', $form_state->getValue('email'));
     $this->store->set('name', $form_state->getValue('name'));
-    $form_state->setRedirect('demo.multistep_two');
+    $form_state->setRedirect('mm_multistepForm.multistep_two');
   }
 }

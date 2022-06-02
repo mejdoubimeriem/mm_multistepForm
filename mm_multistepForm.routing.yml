@@ -6,7 +6,7 @@ mm_multistepForm.multistep_one:
   requirements:
     _permission: 'access content'
 mm_multistepForm.multistep_two:
-  path: '/demo/multistep-two'
+  path: '/mm_multistepForm/multistep-two'
   defaults:
     _form: '\Drupal\mm_multistepForm\Form\MultistepTwoForm'
     _title: 'Second form'
